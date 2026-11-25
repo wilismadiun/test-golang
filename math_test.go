@@ -1,13 +1,22 @@
 package main
 
-import "testing"
+import (
+	"testing"
 
-func TestTambah(T *testing.T) {
-	// Menyiapkan skenario pengujian
+	"github.com/stretchr/testify/assert"
+)
+
+func TestTambah(t *testing.T) {
+	// Inisialisasi assert
+	assert := assert.New(t)
+
+	// Skenario pengujian
 	hasil := Tambah(2, 3)
 	harapan := 5
 
-	if hasil != harapan {
-		T.Errorf("Tambah(2, 3) menghasilkan %d, diharapkan %d", hasil, harapan)
-	}
+	// Menggunakan assert.Equal untuk membandingkan nilai
+	assert.Equal(harapan, hasil, "Seharusnya hasil penjumlahannya adalah 5")
+
+	// Contoh pengujian lain (misal: memastikan tidak bernilai nil/kosong, dll)
+	assert.NotNil(hasil)
 }
