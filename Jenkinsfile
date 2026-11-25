@@ -42,7 +42,7 @@ spec:
     }
 
     environment {
-        DOCKER_IMAGE = 'USERNAME_DOCKERHUB/test-golang'
+        DOCKER_IMAGE = 'irfanaufa07/test-golang'
     }
 
     stages {
